@@ -1,0 +1,39 @@
+body {
+  background-image: url("./images/image2.jpg");
+  background-size: cover;
+}
+
+.app-wrap {
+  text-align: center;
+}
+
+.search-box {
+  /*border-radius: 10px 10px 0px 0px;*/
+  border-bottom: 5px solid rgb(104, 159, 243);
+  border-top: 5px solid rgb(104, 159, 243);
+  border-left: 5px solid rgb(104, 159, 243);
+  border-right: 5px solid rgb(104, 159, 243);
+  border-color: hsl(hue, saturation, lightness);
+}
+
+.temp {
+  font-size: 1cm;
+  color: rgb(71, 101, 146);
+}
+
+.weather {
+  font-size: 0.5cm;
+  color: rgb(192, 64, 41);
+}
+
+.date {
+  color: rgb(252, 93, 93);
+}
+
+.city {
+  color: rgb(252, 93, 93);
+}
+
+.country {
+  color: rgb(252, 93, 93);
+}
