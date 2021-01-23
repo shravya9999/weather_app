@@ -33,6 +33,18 @@ function getResults(query){
                 let wtr=document.querySelector('.weather');
                 wtr.innerText="";
 
+                let pres=document.querySelector('.pressure');
+                pres.innerText="";
+
+                let humi=document.querySelector('.humidity');
+                humi.innerText="";
+
+                let max=document.querySelector('.max');
+                max.innerText="";
+
+                let min=document.querySelector('.min');
+                min.innerText="";
+
                 document.getElementById('imge').src="";
 
             }
@@ -42,7 +54,7 @@ function getResults(query){
 
 function displayResults(weather){
 
-  //  console.log(weather);
+    console.log(weather);
     let city = document.querySelector('.city');
     let country = document.querySelector('.country');
 
@@ -60,9 +72,27 @@ function displayResults(weather){
     country.innerText=weather.sys.country;
 
     let temp=document.querySelector('.temp');
-    const x=Math.round(weather.main.temp) -278  ;
+    const x=Math.round(weather.main.temp) -273;
     const y='°C';
     temp.innerHTML=x+y;
+
+    let pres=document.querySelector('.pressure');
+    pres.innerHTML="Pressure : "+weather.main.pressure;
+
+    let humi=document.querySelector('.humidity');
+    humi.innerHTML="Humidity : "+weather.main.humidity;
+
+    let max=document.querySelector('.max');
+    const a="Temp_max : ";
+    const b=Math.round(weather.main.temp_max) -273;
+    const c='°C';
+    max.innerHTML=a+b+c;
+
+    let min=document.querySelector('.min');
+    const d="Temp_min : ";
+    const e=Math.round(weather.main.temp_min) -273;
+    const f='°C';
+    min.innerHTML=d+e+f;
 
     let wtr=document.querySelector('.weather');
     wtr.innerText=weather.weather[0].main;
@@ -120,6 +150,10 @@ function displayResults(weather){
     else if(wtr.innerText=="Smoke")
     {
         document.getElementById('imge').src="./images/Smoke.jpg";
+    }
+    else if(wtr.innerText=="Mist")
+    {
+        document.getElementById('imge').src="./images/mist.jpg";
     }
 
 }
