@@ -10,7 +10,7 @@ function setQuery(evt){
 
 function getResults(query){
   
-        const one='http://api.openweathermap.org/data/2.5/weather?q=';
+        const one='https://api.openweathermap.org/data/2.5/weather?q=';
         const two=query;
         const three='&appid=5f319cc7690acd9f35d27bfd5dc5cdc2';
 
